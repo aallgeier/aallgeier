@@ -4679,17 +4679,25 @@ input, select, textarea {
 	}
 
 
-	/* Three image containers (use 25% for four, and 50% for two, etc) */
+/* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
 	float: left;
-	width: 25%;
+	width: calc(50% - 25%); /* This accounts for the 5% margin on the left */
 	padding: 0px;
 	margin-left: 5%;
-  }
+	}
   
   /* Clear floats after image containers */
   .row::after {
 	content: "";
 	clear: both;
 	display: table;
+  }
+
+  @media only screen and (max-width: 900px) {
+	.column {
+	  width: 100%;
+	  margin-left: 0;
+	  margin-bottom: 15px; /* add this for some space between stacked images */
+	}
   }

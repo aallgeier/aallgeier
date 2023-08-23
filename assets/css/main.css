@@ -4701,3 +4701,38 @@ input, select, textarea {
 	  margin-bottom: 15px; /* add this for some space between stacked images */
 	}
   }
+
+
+.image-container {
+	padding:0 !important;
+	border-top: none !important;
+    display: flex;
+    justify-content: center; /* This will center the images */
+	gap: 50;
+}
+
+.my-image {
+	width: calc(33.33% - 20px);
+    height: auto;
+	display: block;
+}
+
+.image-container .image.fit {
+    display: inline-block; /* Ensures the links are block-level but inline */
+}
+
+@media (max-width: 940px) {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-container .my-image {
+        width: 80%; /* Adjust width as needed for smaller screens */
+        margin: 10px auto; /* Centers the image and provides vertical spacing */
+    }
+}
+
+.header-left {
+    border-bottom: none !important;
+}

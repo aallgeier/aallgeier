@@ -4708,7 +4708,7 @@ input, select, textarea {
 	border-top: none !important;
     display: flex;
     justify-content: center; /* This will center the images */
-	gap: 50;
+	gap: 10;
 }
 
 .my-image {

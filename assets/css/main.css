@@ -4718,6 +4718,7 @@ input, select, textarea {
 }
 
 .image-container .image.fit {
+	margin: 0;
     display: inline-block; /* Ensures the links are block-level but inline */
 }
 
